@@ -7,7 +7,35 @@ Shellcode远程加载器
 
 注：cdn地址不是w.cdngslb.com的话改一下加载器HttpConnect.cpp第63行的代码
 
-## 依赖安装
+## AES配置
+
+### C++
+main.cpp
+```
+	key = key + "123456";
+	cryptopp::init(key, "0000000000000000");
+```
+
+- 修改拼接的6位字符内容
+- 修改16位iv值
+
+### Python
+
+```
+    key = key + "123456"
+```
+- 对应修改拼接的6位字符内容
+
+```
+   vi = '0000000000000000'
+   text = ''
+
+```
+- 对应修改16位iv值
+- 修改shellcode
+
+
+## 编译依赖
 
 ### cryptopp
 
