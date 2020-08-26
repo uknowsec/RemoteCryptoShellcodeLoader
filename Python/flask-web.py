@@ -24,11 +24,11 @@ def AES_Encrypt(key):
 
 @app.errorhandler(404)
 def miss(e):
-    return redirect("http://wx.qq.com")
+    return redirect("http://baidu.com")
  
 @app.errorhandler(500)
 def error(e):
-    return redirect("http://wx.qq.com")
+    return redirect("http://baidu.com")
 
  
 @app.route('/api', methods=['GET'])
@@ -37,13 +37,13 @@ def GetKey():
     key = key + "123456"
     if len(key) == 16:
         if not key:
-            return redirect("http://wx.qq.com")
+            return redirect("http://baidu.com")
         else:
             resp = make_response(AES_Encrypt(key))
             resp.headers['server'] = 'stgw/1.3.12.4_1.13.5'
             return resp
     else:
-        return redirect("http://wx.qq.com")
+        return redirect("http://baidu.com")
 
 
 if __name__ == '__main__':
