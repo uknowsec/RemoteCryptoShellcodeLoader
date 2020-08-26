@@ -26,7 +26,7 @@ fce8820000006089e531c0648b50308b520c8b52148b72280fb74a2631ffac3c617c022c20c1cf0d
 
 ## DomainFronting
 
-阿里云申请的cdn地址不是w.cdngslb.com的话改一下加载器HttpConnect.cpp第63行的代码
+某云申请的cdn地址不是w.cdngslb.com的话改一下加载器HttpConnect.cpp第63行的代码
 
 
 ## AES配置
